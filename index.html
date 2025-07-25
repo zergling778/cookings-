@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요리 타이밍 게임</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-wrapper">
+        <header>
+            <h1>나만의 요리 마스터!</h1>
+            <div class="stats">
+                <p>점수: <span id="score">0</span></p>
+                <p>남은 시간: <span id="timer">120</span>초</p>
+            </div>
+        </header>
+
+        <main id="cooking-area">
+            <img id="dish-img" src="images/egg_raw.jpg" alt="현재 요리 단계 이미지">
+            <div id="timing-bar-container">
+                <div id="timing-bar"></div>
+                <div id="target-zone"></div>
+            </div>
+            <button id="action-button">시작!</button>
+            <p id="message-area"></p>
+        </main>
+    </div>
+
+    <div id="dish-selection" class="panel">
+        <h2>요리를 선택하세요</h2>
+        <button class="dish-button" data-dish="omelet">오믈렛</button>
+        <button class="dish-button" data-dish="steak">스테이크</button>
+        <button id="cookbook-button" class="panel-button">요리 도감</button>
+    </div>
+
+    <div id="difficulty-selection" class="panel" style="display: none;">
+        <h2>난이도를 선택하세요</h2>
+        <button class="difficulty-button" data-difficulty="easy">쉬움</button>
+        <button class="difficulty-button" data-difficulty="normal">보통</button>
+        <button class="difficulty-button" data-difficulty="hard">어려움</button>
+    </div>
+
+    <div id="game-over-panel" class="panel" style="display: none;">
+        <p id="game-over-message"></p>
+        <button id="restart-button">다시하기</button>
+    </div>
+
+    <div id="cookbook-panel" class="panel" style="display: none;">
+        <h2>나의 요리 도감</h2>
+        <div id="dish-gallery">
+            </div>
+        <button id="back-to-menu-button">메뉴로 돌아가기</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
